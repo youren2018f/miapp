@@ -5,7 +5,7 @@ from io import BytesIO
 from datetime import datetime
 from openpyxl.writer.excel import save_virtual_workbook
 from PIL import Image
-image = Image.open(r"D:\\Documents\\Desktop\\k2.jpg")
+image = Image.open("k2.jpg")
 
 
 
@@ -39,7 +39,7 @@ if uploaded_file is not None:
 
     df = df[(df['受訪內容']=="治安交通宣導") | (df['受訪內容']=="預防犯罪宣導") | (df['受訪內容']=="交通宣導")| (df['受訪內容']=="交通安全宣導")| (df['受訪內容']=="治安宣導")]
  
-    wb = openpyxl.load_workbook(r"D:\\Documents\\Desktop\\111.xlsx")
+    wb = openpyxl.load_workbook("111.xlsx")
     ws =wb['臺東分臺']
     ws.cell(row=1, column=1).value = f'''警察廣播電臺警政宣導節目宣導記錄表
                                                              {now.year - 1911}年{now.month}月{now.day}日（星期{chinese_weekday}）臺東分臺 潘亭羽 製表'''
