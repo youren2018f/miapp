@@ -29,6 +29,7 @@ This app is mi-app
 st.write('''
 ***
 ''')
+st.write("目前的受訪內容關鍵字：治安交通宣導、預防犯罪宣導、交通宣導、交通安全宣導、治安宣導")
 st.header('上傳區')
 
 
