@@ -32,10 +32,16 @@ st.write('''
 st.write("目前的受訪內容關鍵字：治安交通宣導、預防犯罪宣導、交通宣導、交通安全宣導、治安宣導")
 st.header('上傳區')
 
+agree = st.checkbox('是否已經看完Coding is Magic?')
+st.write("[Coding is Magic](https://speakerdeck.com/mosky/coding-is-magic)")
+if agree:
+     st.write('棒棒喔!')
+
+
 
 uploaded_file = st.file_uploader("請上傳節目受訪者申請表xlsx檔", type = ".xlsx")
 
-if uploaded_file is not None:
+if uploaded_file is not None and agree:
     df = pd.read_excel(uploaded_file,usecols="A:M",header = 1)
 
     df = df[(df['受訪內容']=="治安交通宣導") | (df['受訪內容']=="預防犯罪宣導") | (df['受訪內容']=="交通宣導")| (df['受訪內容']=="交通安全宣導")| (df['受訪內容']=="治安宣導")]
