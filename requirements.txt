@@ -5,3 +5,4 @@ pillow==9.1.0
 click==8
 protobuf==3.20.*
 numpy==1.21.6
+altair==4.2.0
